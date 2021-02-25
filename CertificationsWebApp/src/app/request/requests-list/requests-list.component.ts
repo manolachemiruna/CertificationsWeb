@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 
@@ -17,11 +18,14 @@ export class RequestsListComponent implements OnInit {
     requests: RequestDTO[];
     PENDING = ApprovalStatus.Pending;
 
+
+
     constructor(
         private requestService: RequestService
     ) { }
 
     ngOnInit(): void {
+
         this.getAllRequests();
 
     }
